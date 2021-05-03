@@ -12,10 +12,11 @@ def jogar():
     while(not enforcou and not acertou):
 
         chute = input("Escolha uma letra para tentar ganhar adivinhas a palavra?")
+        chute = chute.strip()
 
         index = 0
         for letra in palavra_secreta:
-            if(chute == letra):
+            if(chute.upper() == letra.upper()):
                 print("Econtrei a letra {} na posição {} ".format(letra, index))
             index += 1
 
